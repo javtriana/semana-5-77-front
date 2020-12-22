@@ -1,5 +1,24 @@
 <template>
   <v-container my-16>
+
+
+    <v-row class="d-flex justify-center mb-10" align="center">
+      <p class="font-weight-bold display-2 text--white">Que dicen de nosotros</p>
+    </v-row>
+
+    <v-row class="d-flex justify-center mb-10" align="center">
+      <p class="headline" style="text-align: center">
+        Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      </p>
+    </v-row>
+
+
+
+
+
+
     <v-row class="d-flex justify-space-between">
       <v-col max-height="150">
         <!-- <v-hover v-slot="{ hover }" light> -->

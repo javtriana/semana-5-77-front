@@ -1,5 +1,5 @@
 <template>
-  <v-container my-16>
+  <v-container>
     <v-row class="d-flex justify-space-between">
       <v-col max-height="150">
         <v-hover v-slot="{ hover }" light>

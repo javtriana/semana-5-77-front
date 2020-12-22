@@ -2,13 +2,12 @@
   <div class="home">
     <Barra />
     <Descripcion />
-
-
     <Carousel />
     <Servicios />
-
     <Testimonios />
-    <!-- <Team /> -->
+    <Team />
+    <Fotter />
+    
   </div>
 </template>
 
@@ -19,8 +18,9 @@ import Barra from "@/components/Barra.vue";
 import Carousel from "@/components/Carousel.vue";
 import Descripcion from "@/components/Descripcion.vue";
 import Testimonios from "@/components/Testimonios.vue";
-// import Team from "@/components/Team.vue";
+import Team from "@/components/Team.vue";
 import Servicios from "@/components/Servicios.vue";
+import Fotter from "@/components/Fotter.vue";
 
 export default {
   name: "Home",
@@ -29,8 +29,9 @@ export default {
     Carousel,
     Descripcion,
     Testimonios,
-    // Team,
+    Team,
     Servicios,
+    Fotter,
   }
 };
 </script>
