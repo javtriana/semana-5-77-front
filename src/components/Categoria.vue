@@ -1,8 +1,6 @@
 <template>
   <v-layout align-start>
     <v-flex>
-
-
       <v-container>
         <v-app-bar
           :clipped-left="$vuetify.breakpoint.lgAndUp"
@@ -19,9 +17,6 @@
           <v-btn @click="salir()" icon> <v-icon>logout</v-icon> Salir </v-btn>
         </v-app-bar>
       </v-container>
-
-
-
 
       <v-toolbar text color="white mt-10">
         <v-toolbar-title>Categorías</v-toolbar-title>
@@ -160,7 +155,7 @@ export default {
         { text: "Opciones", value: "opciones", sortable: false },
         { text: "Nombre", value: "nombre", sortable: true },
         { text: "Descripción", value: "descripcion", sortable: false },
-        { text: "Estado", value: "estado", sortable: false },
+        { text: "Estado", value: "estado", sortable: false }
       ],
       editedIndex: -1,
       id: "",
@@ -171,18 +166,18 @@ export default {
       adModal: 0,
       adAccion: 0,
       adNombre: "",
-      adId: "",
+      adId: ""
     };
   },
   computed: {
     formTitle() {
       return this.editedIndex === -1 ? "Nuevo registro" : "Editar registro";
-    },
+    }
   },
   watch: {
     dialog(val) {
       val || this.close();
-    },
+    }
   },
   created() {
     this.listar();
@@ -194,10 +189,10 @@ export default {
       let configuracion = { headers: header };
       axios
         .get("categoria/list", configuracion)
-        .then(function (response) {
+        .then(function(response) {
           me.categorias = response.data;
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log(error);
         });
     },
@@ -242,12 +237,12 @@ export default {
             { id: this.id, nombre: this.nombre, descripcion: this.descripcion },
             configuracion
           )
-          .then(function (response) {
+          .then(function(response) {
             me.limpiar();
             me.close();
             me.listar();
           })
-          .catch(function (error) {
+          .catch(function(error) {
             console.log(error);
           });
       } else {
@@ -258,12 +253,12 @@ export default {
             { nombre: this.nombre, descripcion: this.descripcion },
             configuracion
           )
-          .then(function (response) {
+          .then(function(response) {
             me.limpiar();
             me.close();
             me.listar();
           })
-          .catch(function (error) {
+          .catch(function(error) {
             console.log(error);
           });
       }
@@ -297,14 +292,14 @@ export default {
 
       axios
         .put("categoria/activate", { id: this.adId }, configuracion)
-        .then(function (response) {
+        .then(function(response) {
           me.adModal = 0;
           me.adAccion = 0;
           me.adNombre = "";
           me.adId = "";
           me.listar();
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log(error);
         });
     },
@@ -314,14 +309,14 @@ export default {
       let configuracion = { headers: header };
       axios
         .put("categoria/deactivate", { id: this.adId }, configuracion)
-        .then(function (response) {
+        .then(function(response) {
           me.adModal = 0;
           me.adAccion = 0;
           me.adNombre = "";
           me.adId = "";
           me.listar();
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log(error);
         });
     },
@@ -330,9 +325,7 @@ export default {
     },
     salir() {
       this.$store.dispatch("salir");
-    },
-
-
-  },
+    }
+  }
 };
 </script>
