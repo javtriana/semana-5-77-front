@@ -15,16 +15,26 @@
       gradient="to right, rgba(8,126,223,1), rgba(1,66,182,1)"
     >
       <v-card-title>
-        <strong class="subheading"
-          >Get connected with us on social networks!</strong
-        >
+        <p class="body-1">Contactos:</br>Javier Triana: ing.javtriana@gmail.com-Bogotá D.C</br>
+            Andrés Portillo: capb90@hotmail.com-Pasto</br>
+            Gabriel Ardila: gardiladlp@gmail.com-Bogotá D.C</br>
+            Telefono: 310395146</p>
 
         <v-spacer></v-spacer>
 
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
+        <!-- <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
           <v-icon size="24px">
-            {{ icon }}
+            {{ icon }} 
           </v-icon>
+        </v-btn> -->
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          class="mx-3"
+          dark
+          icon
+        >
+          <a :href="icon.url" :target="icon.target"><v-icon size="24px">{{ icon.name }}</v-icon></a>
         </v-btn>
       </v-card-title>
 
@@ -40,7 +50,13 @@
 <script>
 export default {
   data: () => ({
-    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
-  }),
+    icons: [
+    {
+            name:'mdi-github',
+            url: 'https://github.com/javtriana/semana-5-77-front',
+            target: '_blank'
+        },
+    ]
+  })
 };
 </script>

@@ -16,7 +16,9 @@
         </template>
 
         <template>
-          <v-list-group v-if="(verificar === 'Administrador' || verificar === 'Almacenero')">
+          <v-list-group
+            v-if="verificar === 'Administrador' || verificar === 'Almacenero'"
+          >
             <v-list-item slot="activator">
               <v-list-item-content>
                 <v-list-item-title> Almacén </v-list-item-title>
@@ -37,10 +39,10 @@
               <v-list-item-content>
                 <v-list-item-title> Artículos </v-list-item-title>
               </v-list-item-content>
-            </v-list-item> </v-list-group
-          >
+            </v-list-item>
+          </v-list-group>
 
-          <v-list-group v-if="(verificar === 'Administrador')">
+          <v-list-group v-if="verificar === 'Administrador'">
             <v-list-item slot="activator">
               <v-list-item-content>
                 <v-list-item-title> Accesos </v-list-item-title>
@@ -55,8 +57,6 @@
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
-
-
         </template>
       </v-list>
     </v-navigation-drawer>
@@ -105,23 +105,19 @@
 export default {
   data() {
     return {
-      drawer: false,
+      drawer: false
     };
   },
   computed: {
     verificar() {
-
       console.log(this.$store.state.usuario.rol);
       return this.$store.state.usuario.rol;
-
-
-
-    },
+    }
   },
   methods: {
     salir() {
       this.$store.dispatch("salir");
-    },
-  },
+    }
+  }
 };
 </script>

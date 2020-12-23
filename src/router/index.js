@@ -11,56 +11,56 @@ import Sistem from "../views/Sistem.vue";
 Vue.use(VueRouter);
 
 const routes = [{
-        path: "/login",
-        name: "login",
-        component: Login,
-        meta: {
-            public: true
-        }
-    },
-    {
-        path: "/sistem",
-        name: "sistem",
-        component: Sistem,
-        meta: {
-            public: true
-        }
-    },
-    {
-        path: '/usuario',
-        name: 'usuario',
-        component: Usuario,
-        meta: {
-            auth: true
-        }
-    },
-    {
-        path: "/",
-        name: "home",
-        component: Home,
-        meta: {
-            public: true
+    path: "/login",
+    name: "login",
+    component: Login,
+    meta: {
+        public: true
+    }
+},
+{
+    path: "/sistem",
+    name: "sistem",
+    component: Sistem,
+    meta: {
+        public: true
+    }
+},
+{
+    path: '/usuario',
+    name: 'usuario',
+    component: Usuario,
+    meta: {
+        auth: true
+    }
+},
+{
+    path: "/",
+    name: "home",
+    component: Home,
+    meta: {
+        public: true
 
-        }
+    }
 
-    },
-    {
-        path: "/categoria",
-        name: "categoria",
-        component: Categoria,
-        meta: {
-            auth: true
-        }
-    },
+},
+{
+    path: "/categoria",
+    name: "categoria",
+    component: Categoria,
+    meta: {
+        auth: true
+    }
+},
 
-    {
-        path: "/articulo",
-        name: "articulo",
-        component: Articulo,
-        meta: {
-            auth: true
-        }
-    },
+{
+    path: "/articulo",
+    name: "articulo",
+    component: Articulo,
+    meta: {
+        auth: true
+    }
+},
 
 
 
