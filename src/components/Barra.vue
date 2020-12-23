@@ -5,7 +5,7 @@
       gradient="to right, rgba(8,126,223,.75), rgba(1,66,182,1)"
       max-height="500"
       dark
-    >
+    >º
       <v-container fluid>
         <v-row>
           <v-col cols="5">
@@ -19,8 +19,7 @@
               class="d-flex justify-end"
               background-color="rgba(145,25,89,0)"
             >
-              <v-tab><a href="#equipo">quienes somos</a></v-tab>
-                       
+                      
               <v-tab><a href="#servicios"> servicios</a></v-tab>
               <v-tab><a href="#testimonios">testimonios</a></v-tab>
               <v-tab><a href="#equipo">equipo</a></v-tab>
