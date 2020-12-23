@@ -8,9 +8,7 @@
           v-for="(item, i) in items"
           :key="i"
           :src="item.src"
-          gradient="to right, rgba(8,126,223,.1), rgba(1,66,182,.5)"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
+          gradient="to right, rgba(8,126,223,.5), rgba(1,66,182,.9)"
         >
           <v-spacer class="pa-16"></v-spacer>
 
@@ -18,19 +16,11 @@
             <v-row class="d-flex justify-center mt-5">
               <v-col cols="6" align="center">
                 <p class="font-weight-bold display-2 text--white">
-                  Actionable Training
+                  PredicSystem 
                 </p>
               </v-col>
             </v-row>
 
-            <v-row class="d-flex justify-center mt-3">
-              <v-col cols="6" align="center">
-                <p class="headline text--white">
-                  Lorem ipsum dolor sit amet, consectetur . <br />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-              </v-col>
-            </v-row>
           </v-container>
         </v-carousel-item>
       </v-carousel>
@@ -47,19 +37,19 @@ export default {
     return {
       items: [
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+          src: "https://www.neocheck.es/wp-content/uploads/2019/03/machine-learning.jpg"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+          src: "https://www.securityroundtable.org/wp-content/uploads/2019/06/machine-learning.png"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+          src: "https://s32519.pcdn.co/es/wp-content/uploads/sites/3/2020/08/machine-learning-webinar-recap-blog-hero-image-1536x649.jpg.webp"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-        },
-      ],
+          src: "https://www.ealde.es/wp-content/uploads/2018/04/gestion-de-riesgos-credito-modelo-predictivo.jpg"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
